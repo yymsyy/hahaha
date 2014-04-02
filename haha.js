@@ -5,7 +5,7 @@ var Game = function() {
 (function(exp) {
     var circle = document.getElementById("haha");
     var h = window.screen.height;
-    circle.style.left = (window.screen.width - 100) / 2 + "px";
+    circle.style.left = (window.screen.width - 70) / 2 + "px";
     var jump = true;
     var frist = 0;
     var down = 0;
@@ -46,10 +46,10 @@ var Game = function() {
 
                 var top = circle.offsetTop;
                 var left = circle.offsetLeft;
-                circle.style.background = "url(cricle.png) -200px 0px";
+                // circle.style.background = "url(cricle.png) -200px 0px";
                 var up = setInterval(function() {
                     if (top > 0) {
-                        if (left < 0 || left > window.screen.width - 100) {
+                        if (left < 0 || left > window.screen.width - 70) {
                             random = -random;
                         }
                         left = left + random;
@@ -58,7 +58,7 @@ var Game = function() {
                         circle.style.left = left + "px";
                     } else {
                         clearInterval(up);
-                        circle.style.background = "url(cricle.png) 0px 0px";
+                        // circle.style.background = "url(cricle.png) 0px 0px";
                         down = setInterval(function() {
                             if (top < h) {
                                 click = true;
