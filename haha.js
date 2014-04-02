@@ -5,7 +5,7 @@ var Game = function() {
 (function(exp) {
     var circle = document.getElementById("haha");
     var h = window.screen.height;
-    circle.style.left = (window.screen.width - 70) / 2 + "px";
+    circle.style.left = (window.screen.width - 100) / 2 + "px";
     var jump = true;
     var frist = 0;
     var down = 0;
@@ -49,7 +49,7 @@ var Game = function() {
                 // circle.style.background = "url(cricle.png) -200px 0px";
                 var up = setInterval(function() {
                     if (top > 0) {
-                        if (left < 0 || left > window.screen.width - 70) {
+                        if (left < 0 || left > window.screen.width - 100) {
                             random = -random;
                         }
                         left = left + random;
